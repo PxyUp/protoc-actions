@@ -1,0 +1,14 @@
+name: 'Protoc action'
+description: 'Action for generate from protofile'
+inputs:
+  path:  # id of input
+    description: 'Path and arguments for protoc'
+    required: true
+outputs:
+  success: # id of output
+    description: 'Success'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.path }}
