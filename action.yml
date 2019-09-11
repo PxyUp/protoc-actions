@@ -1,7 +1,8 @@
 name: 'Protoc action'
-description: 'Action for generate from protofile'
+description: 'Action for generate from client and server from protofiles'
+author: 'PxyUp'
 inputs:
-  path:  # id of input
+  path:
     description: 'Path and arguments for protoc'
     required: true
 outputs:
@@ -12,3 +13,6 @@ runs:
   image: 'Dockerfile'
   args:
     - ${{ inputs.path }}
+branding:
+  icon: 'aperture'
+  color: 'green'
