@@ -15,6 +15,6 @@ jobs:
         DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
         DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
     - name: Build the Docker image
-      run: docker build -t PxyUp/protoc-actions .
+      run: docker build -t pxyup/protoc-actions .
     - name: Docker Publish
-      run: docker push PxyUp/protoc-actions
+      run: docker push pxyup/protoc-actions
