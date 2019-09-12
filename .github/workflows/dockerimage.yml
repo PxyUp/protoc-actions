@@ -14,4 +14,4 @@ jobs:
     - name: Build the Docker image
       run: docker tag img 23923994/protoc-actions
     - name: Docker Publish
-      run: docker login --username ${{ secrets.DOCKER_PASSWORD }} --password ${{ secrets.DOCKER_USERNAME }} https://hub.docker.com && docker push 23923994/protoc-actions
+      run: docker login --username ${{ secrets.DOCKER_PASSWORD }} --password ${{ secrets.DOCKER_USERNAME }} docker.com && docker push 23923994/protoc-actions
