@@ -5,17 +5,15 @@ on: [push]
 jobs:
 
   build:
- 
     runs-on: ubuntu-latest
- 
     steps:
     - name: Docker Login
       uses: actions/docker/login@master
       env:
         DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
         DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
-    - name: Build the Docker image
-      run: ls    
+    - name: Check out code into dir
+      uses: actions/checkout@v1
     - name: Build the Docker image
       run: docker build -t pxyup/protoc-actions .
     - name: Docker Publish
