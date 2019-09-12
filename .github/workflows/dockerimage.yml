@@ -1,0 +1,22 @@
+name: Docker Image CI
+
+on: [push]
+
+jobs:
+
+  build:
+ 
+    runs-on: ubuntu-latest
+ 
+    steps:
+    - name: Docker Login
+      uses: actions/docker/login@master
+      env:
+        DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
+        DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
+    - uses: actions/checkout@v1
+    - name: Build the Docker image
+      run: docker build . PxyUp/protoc-actions
+    - name: Docker Publish
+      uses: actions/action-builder/docker@master
+      run: docker push PxyUp/protoc-actions
