@@ -10,8 +10,6 @@ jobs:
     - name: Check out code into dir
       uses: actions/checkout@v1
     - name: Build the Docker image
-      run: docker build -t img .
-    - name: Build the Docker image
-      run: docker tag img pxyup/protoc-actions
+      run: docker build -t docker.pkg.github.com/squzy/protoc-actions:latest .
     - name: Docker Publish
-      run: docker login --username ${{ secrets.DOCKER_PASSWORD }} --password ${{ secrets.DOCKER_USERNAME }} docker.com && docker push pxyup/protoc-actions
+      run: docker login docker.pkg.github.com --username ${{ secrets.DOCKER_USERNAME }} --password ${{ secrets.TOKEN }} && docker push docker.pkg.github.com/squzy/protoc-actions:latest
