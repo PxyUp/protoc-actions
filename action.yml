@@ -10,7 +10,7 @@ outputs:
     description: 'Success'
 runs:
   using: 'docker'
-  image: 'docker://docker.pkg.github.com/squzy/protoc-actions/protoc:latest'
+  image: 'Dockerfile'
   args:
     - ${{ inputs.path }}
 branding:
