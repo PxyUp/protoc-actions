@@ -10,6 +10,6 @@ jobs:
     - name: Check out code into dir
       uses: actions/checkout@v1
     - name: Build the Docker image
-      run: docker build -t docker.pkg.github.com/squzy/protoc-actions/protoc:latest .
+      run: docker build -t docker.pkg.github.com/pxyup/protoc-actions:latest .
     - name: Docker Publish
-      run: docker login docker.pkg.github.com --username ${{ secrets.DOCKER_USERNAME }} --password ${{ secrets.TOKEN }} && docker push docker.pkg.github.com/squzy/protoc-actions/protoc:latest
+      run: docker push docker.pkg.github.com/pxyup/protoc-actions:latest
