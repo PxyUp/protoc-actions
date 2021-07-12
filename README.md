@@ -1,6 +1,6 @@
 # Protoc actions
 
-This actions allow you generate client and server for grpc
+This actions allow you generate client and server for grpc in pipeline
 
 # How to use
 
