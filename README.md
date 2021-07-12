@@ -2,6 +2,8 @@
 
 This actions allow you generate client and server for grpc in pipeline(to avoid push generated files in repo)
 
+[DEMO](https://github.com/squzy/squzy_proto/blob/test/actio/.github/workflows/lint.yml#L20)
+
 # How to use
 
 ```yml
