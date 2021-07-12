@@ -10,7 +10,7 @@ outputs:
     description: 'Success'
 runs:
   using: 'docker'
-  image: 'Dockerfile'
+  image: ghcr.io/pxyup/protoc-actions:latest
   args:
     - ${{ inputs.path }}
 branding:
